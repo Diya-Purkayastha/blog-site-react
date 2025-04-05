@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "cover": "https://i.ibb.co/84Zfw2n/1.jpg",
+      "title": "Top 10 ES6 Features You Must Know",
+      "author_img": "https://i.ibb.co.com/bRXmBSt0/boy.jpg",
+      "author": "Hamza Sohail",
+      "posted_date": "September 15, 2023",
+      "reading_time": 5,
+      "hashtags": [
+        "beginners",
+        "es6"
+      ]
+    },
+    {
+      "id": 2,
+      "cover": "https://i.ibb.co/6N2dgnZ/2.png",
+      "title": "JavaScript Objects for Absolute Beginners: A Fun Introduction",
+      "author_img": "https://i.ibb.co.com/bRXmBSt0/boy.jpg",
+      "author": "Sajal Ali",
+      "posted_date": "August 28, 2023",
+      "reading_time": 4,
+      "hashtags": [
+        "javascript",
+        "coding"
+      ]
+    },
+    {
+      "id": 3,
+      "cover": "https://i.ibb.co/84Zfw2n/1.jpg",
+      "title": "Understanding Async/Await in JavaScript",
+      "author_img": "https://i.ibb.co.com/35zP239p/girl.jpg",
+      "author": "Alia Raza",
+      "posted_date": "October 5, 2023",
+      "reading_time": 6,
+      "hashtags": [
+        "javascript",
+        "async"
+      ]
+    },
+    {
+      "id": 4,
+      "cover": "https://i.ibb.co/6N2dgnZ/2.png",
+      "title": "A Beginner's Guide to React Hooks",
+      "author_img": "https://i.ibb.co.com/35zP239p/girl.jpg",
+      "author": "Ayesha Khan",
+      "posted_date": "November 12, 2023",
+      "reading_time": 7,
+      "hashtags": [
+        "react",
+        "hooks",
+        "beginners"
+      ]
+    }
+    
+  ]
+  
