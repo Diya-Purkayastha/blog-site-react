@@ -2,6 +2,7 @@ import { CiLineHeight } from 'react-icons/ci'
 import './App.css'
 import Blogs from './Components/Blogs/Blogs'
 import Navbar from './Components/Navbar/Navbar'
+import Footer from './Components/Footer/Footer'
 import { useState } from 'react'
 
 function App() {
@@ -10,18 +11,21 @@ const[readingCount , setReadingCount] = useState(0)
 
  const handleBookmarked = (blog) =>{
     // console.log(blog);
-    setBookmarked([...Bookmarked , blog])
+    
+      setBookmarked([...Bookmarked , blog])
+    
+    
  } 
  
 
  const handleMarkAsButton = (time, id) =>{
     setReadingCount(readingCount + time);
     handleRemoveFromBookmark(id)
+
  }
 
  const handleRemoveFromBookmark = (id) =>{
   const remainingBookmark = Bookmarked.filter(mark => mark.id !== id)
-  console.log(remainingBookmark);
   setBookmarked(remainingBookmark)
  }
 
@@ -31,12 +35,12 @@ const[readingCount , setReadingCount] = useState(0)
       <Navbar> </Navbar>
       
 
-      <div className="main-container flex  text-center my-4 ">
-        <div className="left-container w-[70%] ">
+      <div className="main-container flex flex-col md:flex-row text-center my-4 gap-5 p-5">
+        <div className="left-container md:w-[70%] ">
           
           <Blogs handleBookmarked={handleBookmarked} handleMarkAsButton={handleMarkAsButton} ></Blogs>
         </div>
-        <div className="right-container w-[30%] p-2 bg-stone-100">
+        <div className="right-container md:w-[30%] p-2 bg-stone-100">
           <h1 className='font-semibold'>Reading time: {readingCount} </h1>
           <h1 className='mb-3 font-semibold'>Bookmarked Count:{Bookmarked.length} </h1>
           {
@@ -44,6 +48,8 @@ const[readingCount , setReadingCount] = useState(0)
           }
         </div>
       </div>
+
+      <Footer></Footer>
     </>
   )
 }

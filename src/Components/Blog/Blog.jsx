@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBookmark } from "react-icons/fa";
 
 const Blog = ({blog, handleBookmarked, handleMarkAsButton}) => {
-  
+    const [activeId , setActiveId] = useState([]);
+    const handleClick = () =>{
+        handleMarkAsButton(blog.reading_time , blog.id);
+        setActiveId(blog.id)
+    }
+
+
     return (
         <div className='' >
-            <div className="card bg-base-100 w-96 shadow-sm">
+            <div className="card bg-base-100  shadow-sm">
             <figure>
                 <img
                 src={blog.cover}
@@ -25,7 +31,7 @@ const Blog = ({blog, handleBookmarked, handleMarkAsButton}) => {
                 }
                </div>
                 <div className="card-actions justify-end">
-                <button onClick={()=> handleMarkAsButton(blog.reading_time , blog.id)} className="btn btn-primary">Mark as read</button>
+                <button onClick={handleClick } className={`btn ${activeId === blog.id ? "btn-disable" : 'btn-primary'}`}>Mark as read</button>
                 </div>
             </div>
             </div>
